@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Signup Form</h2>
+        <div class="form-group">
+          
+            <input type="email" id="email" placeholder=" "  required/>
+            <label for="email">Enter Email</label>
+            
+          
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" placeholder=" " />
+            <label for="password">Enter Password</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="name" placeholder=" " />
+            <label for="name">Enter Name</label>
+        </div>
+        <div class="form-group">
+            <input type="number" id="age" placeholder=" " />
+            <label for="age">Enter Age</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="file" id="imageUpload" placeholder=" " accept=".jpg,.png,.gif" />
+            <label for="imageUpload">Select Image</label>
+        </div>
+
+        <div>
+          <button onclick="Googlesignin()">Google Signin</button>
+          <button id="signup">Signup</button>
+          <a href="#" onclick="window.location.replace('loginpage.html')">Already have an account? Login</a>
+        </div>
+    </div>
+   
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+    apiKey: "AIzaSyCVSVrOChiSEoe7ZP2mZP_qy-X5tvZp3-g",
+    authDomain: "to-do-app-ee036.firebaseapp.com",
+    projectId: "to-do-app-ee036",
+    storageBucket: "to-do-app-ee036.appspot.com",
+    messagingSenderId: "1017482273905",
+    appId: "1:1017482273905:web:11c216ea60408bd258a7d0",
+    measurementId: "G-SQHDXJTTJR"
+  };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
